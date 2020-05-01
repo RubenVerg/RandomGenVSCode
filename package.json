@@ -1,0 +1,26 @@
+{
+    "name": "randomgen",
+    "displayName": "RandomGen Support",
+    "description": "An extension to support Orteil's RandomGen.",
+    "publisher": "RubenVerg",
+    "version": "1.0.0",
+    "engines": {
+        "vscode": "^1.44.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "randomgen",
+            "aliases": ["RandomGen", "randomGen", "rg"],
+            "extensions": [".rg", ".randomgen"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "randomgen",
+            "scopeName": "text.randomgen",
+            "path": "./syntaxes/randomgen.tmLanguage.json"
+        }]
+    }
+}

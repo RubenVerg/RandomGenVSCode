@@ -1,0 +1,76 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "RandomGen",
+	"patterns": [
+		{
+			"include": "#lists"
+		}
+	],
+	"repository": {
+		"keylists": {
+			"patterns": [
+				{
+					"name": "keyword.control.detail.randomgen",
+					"match": "\\$(name|author|description|picture|amount|button|allow duplicates)"
+				},
+				{
+					"name": "keyword.control.include.randomgen",
+					"match": "\\b\\$include\\b"
+				}
+			]
+		},
+		"listdefs": {
+			"name": "constant.language.randomgen",
+			"begin": "\\$",
+			"end": ".+",
+			"beginCaptures": {
+				"0": {
+					"name": "punctuation.dollar.randomgen"
+				}
+			}
+		},
+		"percs": {
+			"name": "constant.numeric.randomgen",
+			"match": "\\{\\d+\\%}"
+		},
+		"squarebs": {
+			"name": "storage.type.randomgen",
+			"begin": "\\[",
+			"end": "\\]",
+			"captures": {
+				"0": {
+					"name": "support.function.randomgen"
+				}
+			},
+			"patterns": [{
+				"include": "#squarebs"
+			}]
+		},
+		"listels": {
+			"name": "string.unquoted.randomgen",
+			"match": "[^$\\s].+",
+			"patterns": [
+				{
+					"include": "#squarebs"
+				}
+			]
+		},
+		"lists": {
+			"patterns": [
+				{
+					"include": "#keylists"
+				},
+				{
+					"include": "#listdefs"
+				},
+				{
+					"include": "#squarebs"
+				},
+				{
+					"include": "#listels"
+				}
+			]
+		}
+	},
+	"scopeName": "text.randomgen"
+}
