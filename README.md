@@ -4,62 +4,97 @@ Support for RandomGen.
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+### Syntax highlight
 
-For example if there is an image subfolder under your extension project workspace:
+#### Lists
 
-<!--![feature X](images/feature-x.png)-->
+![Lists: this image shows a list named '$list' colored blue which contains three elements colored white. TRANSCRIPT $list newline element newline different element END TRANSCRIPT](img/list.png)
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+##### Additions and roots
 
-## Requirements
+![Additions: this image shows a list called '$+list', the plus is colored purple. TRANSCRIPT $+list newline added element END TRANSCRIPT](img/add.png)
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![Roots: this image shows a list called '$>root', the greater than sign is colored purple. TRANSCRIPT $>root newline [interpolated] newline [percentaged] {25%} END TRANSCRIPT](img/root.png)
 
-## Extension Settings
+#### Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+![Settings: this image shows purple-colored '$name' and '$author'. TRANSCRIPT $name : Some random generator newline $author : RubenVerg END TRANSCRIPT](img/settings.png)
 
-For example:
+#### Percentages
 
-This extension contributes the following settings:
+![Percentages: this image shows three elements of a list with light green percentages: {15%}, {15%} and {5%}. TRANSCRIPT $percentaged newline fifteen {15%} newline also fifteen {15%} newline rare {5%} END TRANSCRIPT](img/percentages.png)
 
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
+#### Interpolations
+
+![Interpolations: this image shows a list with three elements, the first has an orange interpoation with red brackets, the second has two inline strings separated by a red pipe, the third has nested interpolations. TRANSCRIPT $interpolated newline green [list] inline [happiness|sadness] newline nested [percentaged|[list| ]|lol] END TRANSCRIPT](img/interpolations.png)
+
+##### Special interpolations and keywords
+
+![This image is just an example of what follows and can be ignored.](img/special.png)
+
+###### Special interpolations (colored purple, SRs!)
+
+* `[a]`
+* `[an]`
+* `[===]`
+* `[*DEBUG ON*]`
+* `[*DEBUG OFF*]`
+* `[s]`
+
+###### Keywords to be appended with a comma, (colored yellow, SRs!)
+
+* `first part`
+* `middle part`
+* `last part`
+* `hidden`
+* `unique`
+* `mundane`
+* `title`
+* `lower`
+* `compress`
+* `written`
+
+##### Tags
+
+![Tags: this image shows a list element with an interpolation, inside the brackets are the list identifier and a blue ',#el'. TRANSCRIPT tagged [list,#el] END TRANSCRIPT](img/tags.png)
+
+#### Comments
+
+![Comments: this image shows a comment marked by a starting double-slash. TRANSCRIPT // Hello! END TRANSCRIPT](img/comments.png)
+
+### Snippets
+
+#### Quick Start
+
+`start` and `settings` both open to
+
+```text
+\$name : $1
+\$author : $2
+\$description : $3
+\$amount : ${4:10}
+\$picture : $5
+\$button : ${6:Go!}
+$0
+```
+
+#### List
+
+`list` opens to
+
+```text
+\$list
+element
+another element
+$0
+```
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+Comments require a starting space to differentiate them from URLs.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
 ### 1.0.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Initial release.

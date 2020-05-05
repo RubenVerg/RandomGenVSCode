@@ -3,55 +3,138 @@
 	"name": "RandomGen",
 	"patterns": [
 		{
+			"include": "#comments"
+		},
+		{
 			"include": "#lists"
 		}
 	],
+	"scopeName": "text.randomgen",
 	"repository": {
+		"comments": {
+			"name": "comment.line.double-slash.randomgen",
+			"match": "[\\b ]//.*"
+		},
 		"keylists": {
 			"patterns": [
 				{
 					"name": "keyword.control.detail.randomgen",
-					"match": "\\$(name|author|description|picture|amount|button|allow duplicates)"
+					"match": "\\$(name|author|description|picture|amount|button|allow duplicates|\\[note\\]|force unique|includes finalized|all roots)"
 				},
 				{
 					"name": "keyword.control.include.randomgen",
-					"match": "\\b\\$include\\b"
+					"match": "\\$include"
 				}
 			]
 		},
-		"listdefs": {
-			"name": "constant.language.randomgen",
-			"begin": "\\$",
+		"listheads": {
+			"name": "entity.name.tag.randomgen",
+			"begin": "(\\$)(>?)(\\+?)",
 			"end": ".+",
 			"beginCaptures": {
-				"0": {
+				"1": {
 					"name": "punctuation.dollar.randomgen"
+				},
+				"2": {
+					"name": "keyword.control.randomgen"
+				},
+				"3": {
+					"name": "keyword.control.randomgen"
 				}
 			}
 		},
-		"percs": {
+		"percentages": {
 			"name": "constant.numeric.randomgen",
-			"match": "\\{\\d+\\%}"
+			"match": "\\{[0-9]+%\\}"
 		},
-		"squarebs": {
-			"name": "storage.type.randomgen",
+		"specialists": {
+			"name": "keyword.control.randomgen",
+			"match": "(\\[)(===|\\*DEBUG (ON|OFF)\\*|an?|s| )(\\])",
+			"captures": {
+				"1": {
+					"name": "string.regexp.randomgen"
+				},
+				"4": {
+					"name": "string.regexp.randomgen"
+				}
+			}
+		},
+		"listincludes": {
+			"name": "string.interpolated.randomgen",
 			"begin": "\\[",
 			"end": "\\]",
 			"captures": {
 				"0": {
-					"name": "support.function.randomgen"
+					"name": "string.regexp.randomgen"
 				}
 			},
-			"patterns": [{
-				"include": "#squarebs"
-			}]
-		},
-		"listels": {
-			"name": "string.unquoted.randomgen",
-			"match": "[^$\\s].+",
 			"patterns": [
 				{
-					"include": "#squarebs"
+					"include": "#listincludes"
+				},
+				{
+					"name": "string.regexp.randomgen",
+					"match": "\\|"
+				},
+				{
+					"name": "storage.randomgen",
+					"match": ",?#[^\\]\\s]+"
+				},
+				{
+					"name": "support.function.randomgen",
+					"match": ", ?(hidden|unique|mundane|title|lower|compress|written|(first|middle|last) part|)"
+				}
+			]
+		},
+		"html": {
+			"patterns": [
+				{
+					"name": "markup.bold.randomgen",
+					"match": "<b>.*</b>"
+				},
+				{
+					"name": "markup.italic.randomgen",
+					"match": "<i>.*</i>"
+				},
+				{
+					"name": "markup.underline.randomgen",
+					"match": "<u>.*</u>"
+				},
+				{
+					"name": "markup.quote.randomgen",
+					"match": "<q>.*</q>"
+				},
+				{
+					"name": "markup.other.randomgen",
+					"match": "<p>.*</p>"
+				},
+				{
+					"name": "markup.other.randomgen",
+					"match": "<small>.*</small>"
+				},
+				{
+					"name": "markup.other.randomgen",
+					"match": "<big>.*</big>"
+				},
+				{
+					"name": "markup.other.randomgen",
+					"match": "<center>.*</center>"
+				},
+				{
+					"name": "markup.heading.1.randomgen",
+					"match": "<h1>.*</h1>"
+				},
+				{
+					"name": "markup.heading.2.randomgen",
+					"match": "<h2>.*</h2>"
+				},
+				{
+					"name": "markup.heading.3.randomgen",
+					"match": "<h3>.*</h3>"
+				},
+				{
+					"name": "markup.other.randomgen",
+					"match": "<br>"
 				}
 			]
 		},
@@ -61,16 +144,21 @@
 					"include": "#keylists"
 				},
 				{
-					"include": "#listdefs"
+					"include": "#listheads"
 				},
 				{
-					"include": "#squarebs"
+					"include": "#specialists"
 				},
 				{
-					"include": "#listels"
+					"include": "#listincludes"
+				},
+				{
+					"include": "#percentages"
+				},
+				{
+					"include": "#html"
 				}
 			]
 		}
-	},
-	"scopeName": "text.randomgen"
+	}
 }

@@ -1,1 +1,6 @@
 .metals/
+syntaxes/node_modules/
+randomgen.js
+node_modules/
+.vscode/
+syntaxes/compile.js

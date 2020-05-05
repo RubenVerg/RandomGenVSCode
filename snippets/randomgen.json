@@ -1,0 +1,30 @@
+{
+	"Quick Start": {
+		"prefix": [
+			"start",
+			"settings"
+		],
+		"body": [
+			"\\$name : $1",
+			"\\$author : $2",
+			"\\$description : $3",
+			"\\$amount : ${4:10}",
+			"\\$picture : $5",
+			"\\$button : ${6:Go!}",
+			"$0"
+		],
+		"description": "A quick start for every RandomGen project."
+	},
+	"List": {
+		"prefix": [
+			"list"
+		],
+		"body": [
+			"\\$${1:list}",
+			"\\${2:element}",
+			"\\${3:another element}",
+			"$0"
+		],
+		"description": "A template list"
+	}
+}
