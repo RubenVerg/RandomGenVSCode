@@ -3,7 +3,7 @@
     "displayName": "RandomGen Support",
     "description": "An extension to support Orteil's RandomGen.",
     "publisher": "RubenVerg",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "engines": {
         "vscode": "^1.44.0"
     },

@@ -26,7 +26,7 @@ Support for RandomGen.
 
 #### Interpolations
 
-![Interpolations: this image shows a list with three elements, the first has an orange interpoation with red brackets, the second has two inline strings separated by a red pipe, the third has nested interpolations. TRANSCRIPT $interpolated newline green [list] inline [happiness|sadness] newline nested [percentaged|[list| ]|lol] END TRANSCRIPT](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/interpolations.png)
+![Interpolations: this image shows a list with three elements, the first has an orange interpoation with red brackets, the second has two inline strings separated by a red pipe, the third has nested interpolations. Not transcripted due to markdown limitations.](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/interpolations.png)
 
 ##### Special interpolations and keywords
 
@@ -94,6 +94,10 @@ $0
 Comments require a starting space to differentiate them from URLs.
 
 ## Release Notes
+
+### 1.0.1
+
+Readme fixed.
 
 ### 1.0.0
 
