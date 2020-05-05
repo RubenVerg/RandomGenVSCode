@@ -8,29 +8,29 @@ Support for RandomGen.
 
 #### Lists
 
-![Lists: this image shows a list named '$list' colored blue which contains three elements colored white. TRANSCRIPT $list newline element newline different element END TRANSCRIPT](img/list.png)
+![Lists: this image shows a list named '$list' colored blue which contains three elements colored white. TRANSCRIPT $list newline element newline different element END TRANSCRIPT](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/list.png)
 
 ##### Additions and roots
 
-![Additions: this image shows a list called '$+list', the plus is colored purple. TRANSCRIPT $+list newline added element END TRANSCRIPT](img/add.png)
+![Additions: this image shows a list called '$+list', the plus is colored purple. TRANSCRIPT $+list newline added element END TRANSCRIPT](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/add.png)
 
-![Roots: this image shows a list called '$>root', the greater than sign is colored purple. TRANSCRIPT $>root newline [interpolated] newline [percentaged] {25%} END TRANSCRIPT](img/root.png)
+![Roots: this image shows a list called '$>root', the greater than sign is colored purple. TRANSCRIPT $>root newline [interpolated] newline [percentaged] {25%} END TRANSCRIPT](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/root.png)
 
 #### Settings
 
-![Settings: this image shows purple-colored '$name' and '$author'. TRANSCRIPT $name : Some random generator newline $author : RubenVerg END TRANSCRIPT](img/settings.png)
+![Settings: this image shows purple-colored '$name' and '$author'. TRANSCRIPT $name : Some random generator newline $author : RubenVerg END TRANSCRIPT](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/settings.png)
 
 #### Percentages
 
-![Percentages: this image shows three elements of a list with light green percentages: {15%}, {15%} and {5%}. TRANSCRIPT $percentaged newline fifteen {15%} newline also fifteen {15%} newline rare {5%} END TRANSCRIPT](img/percentages.png)
+![Percentages: this image shows three elements of a list with light green percentages: {15%}, {15%} and {5%}. TRANSCRIPT $percentaged newline fifteen {15%} newline also fifteen {15%} newline rare {5%} END TRANSCRIPT](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/percentages.png)
 
 #### Interpolations
 
-![Interpolations: this image shows a list with three elements, the first has an orange interpoation with red brackets, the second has two inline strings separated by a red pipe, the third has nested interpolations. TRANSCRIPT $interpolated newline green [list] inline [happiness|sadness] newline nested [percentaged|[list| ]|lol] END TRANSCRIPT](img/interpolations.png)
+![Interpolations: this image shows a list with three elements, the first has an orange interpoation with red brackets, the second has two inline strings separated by a red pipe, the third has nested interpolations. TRANSCRIPT $interpolated newline green [list] inline [happiness|sadness] newline nested [percentaged|[list| ]|lol] END TRANSCRIPT](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/interpolations.png)
 
 ##### Special interpolations and keywords
 
-![This image is just an example of what follows and can be ignored.](img/special.png)
+![This image is just an example of what follows and can be ignored.](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/special.png)
 
 ###### Special interpolations (colored purple, SRs!)
 
@@ -56,11 +56,11 @@ Support for RandomGen.
 
 ##### Tags
 
-![Tags: this image shows a list element with an interpolation, inside the brackets are the list identifier and a blue ',#el'. TRANSCRIPT tagged [list,#el] END TRANSCRIPT](img/tags.png)
+![Tags: this image shows a list element with an interpolation, inside the brackets are the list identifier and a blue ',#el'. TRANSCRIPT tagged [list,#el] END TRANSCRIPT](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/tags.png)
 
 #### Comments
 
-![Comments: this image shows a comment marked by a starting double-slash. TRANSCRIPT // Hello! END TRANSCRIPT](img/comments.png)
+![Comments: this image shows a comment marked by a starting double-slash. TRANSCRIPT // Hello! END TRANSCRIPT](https://raw.githubusercontent.com/RubenVerg/RandomGenVSCode/master/img/comments.png)
 
 ### Snippets
 
